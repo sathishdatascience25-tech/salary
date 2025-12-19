@@ -3,30 +3,30 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df=pd.read_csv("C:/Users/ADMIN/Downloads/Salary_dataset.csv")
-print(df.head())
-print(df.columns)
-sns.scatterplot(x="YearsExperience",y="Salary",data=df)
-plt.title("years vs salary")
-plt.show()
+# # df=pd.read_csv("C:/Users/ADMIN/Downloads/Salary_dataset.csv")
+# print(df.head())
+# print(df.columns)
+# sns.scatterplot(x="YearsExperience",y="Salary",data=df)
+# plt.title("years vs salary")
+# plt.show()
 
-sns.lineplot(x="YearsExperience",y="Salary",data=df)
-plt.title("years vs salary")
-plt.show()
+# sns.lineplot(x="YearsExperience",y="Salary",data=df)
+# plt.title("years vs salary")
+# plt.show()
 
-print(df.info())
+# print(df.info())
 
-print(df.describe())
+# print(df.describe())
 
 
-sns.histplot(df["YearsExperience"],kde=True)
-plt.show()
+# sns.histplot(df["YearsExperience"],kde=True)
+# plt.show()
 
-print(df.isnull().sum())
-print(df[df.duplicated()])
+# print(df.isnull().sum())
+# print(df[df.duplicated()])
 
-print(df.head())
-df["Salary"]=df["Salary"].astype(int)
+# print(df.head())
+# df["Salary"]=df["Salary"].astype(int)
 
 
 def salary_level(years):
@@ -38,8 +38,8 @@ def salary_level(years):
         return 2
     else :
         return 3
-df["exp_level"]   =df["YearsExperience"].apply(salary_level)
-print(df.tail())
+# df["exp_level"]   =df["YearsExperience"].apply(salary_level)
+# print(df.tail())
 
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
